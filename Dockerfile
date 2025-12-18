@@ -46,7 +46,7 @@ RUN pip install --no-cache-dir \
 # -----------------------------------------------------------------------------
 # Pin to 0.15.4 and patch builder.py to fix Blackwell sm_121 detection
 COPY patch_ds.py /opt/patch_ds.py
-RUN pip install --no-cache-dir deepspeed==0.15.4 && python3 /opt/patch_ds.py
+RUN pip install --no-cache-dir deepspeed==0.15.4 && python3 /opt/patch_ds.py && rm /opt/patch_ds.py
 
 # -----------------------------------------------------------------------------
 # Flash Attention
@@ -73,7 +73,8 @@ WORKDIR /opt
 RUN git clone https://github.com/NVIDIA/cutlass --branch v3.6.0 --depth 1
 ENV CUTLASS_PATH=/opt/cutlass
 # Clone OpenFold
-RUN git clone https://github.com/aqlaboratory/openfold.git /opt/openfold
+RUN git clone https://github.com/aqlaboratory/openfold.git /opt/openfold && \
+    rm -rf /opt/openfold/.git
 
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
@@ -100,7 +101,7 @@ RUN git clone https://github.com/openmm/openmm.git && \
 RUN pip install git+https://github.com/openmm/pdbfixer.git
 
 # Install other dependencies
-RUN pip install biopython dm-tree ml-collections scipy
+# Removed redundant pip install (biopython, etc already installed)
 
 # Remove LD_LIBRARY_PATH hack as we installed to system locations
 
