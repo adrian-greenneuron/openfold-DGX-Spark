@@ -67,6 +67,45 @@ Benchmarks run on **NVIDIA DGX Spark** (Grace Blackwell GB10, 20 CPU cores, 119G
 | **Medium (185)**| No Relax | 35.0s | - | 45s |
 | **Medium (185)**| **Relaxed** | **35.2s** | **5.8s** | **51s** |
 
+---
+
+### Run in SoloSeq Mode
+OpenFold supports a "SoloSeq" mode using **ESM-1b embeddings**, offering a faster alternative that skips MSA generation. The ESM-1b model (~2.5GB) is now **baked into the Docker image**, so no internet is required at runtime.
+
+To run SoloSeq, use the **Split Workflow**:
+
+1.  **Generate Embeddings** (uses `precompute_embeddings.py`):
+    ```bash
+    # Prepare input
+    # mkdir -p my_fasta && echo ">1UBQ" > my_fasta/ubiquitin.fasta ...
+
+    docker run --gpus all --ipc=host --shm-size=64g \
+        -v $(pwd)/my_fasta:/fasta_dir \
+        -v $(pwd)/embeddings:/embeddings \
+        openfold-dgx-spark:latest \
+        python3 /opt/openfold/scripts/precompute_embeddings.py \
+        /fasta_dir \
+        /embeddings
+    ```
+
+2.  **Run Inference** (uses local embeddings):
+    ```bash
+    docker run --gpus all --ipc=host --shm-size=64g \
+        -v $(pwd)/my_fasta:/fasta_dir \
+        -v $(pwd)/embeddings:/embeddings \
+        -v $(pwd)/output:/output \
+        openfold-dgx-spark:latest \
+        python3 run_pretrained_openfold.py \
+        /fasta_dir \
+        /opt/openfold/examples/monomer/template_mmcif \
+        --output_dir /output \
+        --config_preset seq_model_esm1b_ptm \
+        --openfold_checkpoint_path /opt/openfold/openfold_soloseq_params/seq_model_esm1b_ptm.pt \
+        --use_precomputed_alignments /embeddings \
+        --model_device cuda:0
+    ```
+
+
 > **Note**: Total time includes Docker container startup, model loading, and template downloading. For batch processing, consider keeping the container running to amortize startup costs.
 
 ## Repository Structure

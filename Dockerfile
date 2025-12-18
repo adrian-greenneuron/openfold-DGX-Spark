@@ -139,6 +139,13 @@ RUN mkdir -p /root/.triton/autotune
 # Download OpenFold model parameters from AWS S3 (public bucket, no auth required)
 RUN bash /opt/openfold/scripts/download_openfold_params.sh /opt/openfold
 
+# Install fair-esm (required for SoloSeq) and download SoloSeq parameters
+RUN pip install --no-cache-dir fair-esm && \
+    bash /opt/openfold/scripts/download_openfold_soloseq_params.sh /opt/openfold
+
+# Pre-download ESM-1b weights for SoloSeq (bakes ~2.5GB model into image)
+RUN python3 -c "import esm; esm.pretrained.esm1b_t33_650M_UR50S()"
+
 # -----------------------------------------------------------------------------
 # Example Templates
 # -----------------------------------------------------------------------------
