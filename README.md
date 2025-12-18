@@ -117,6 +117,36 @@ To run SoloSeq, use the **Split Workflow**:
         --model_device cuda:0
     ```
 
+---
+
+### Multimer Inference (Protein Complexes)
+
+OpenFold supports **multimer inference** for predicting protein complex structures using AlphaFold-Multimer v2.3 weights.
+
+> **Note**: Multimer benchmarks are not included in this repository because they require either:
+> - Precomputed alignments for the target complex, OR
+> - The full AlphaFold databases (~2.5TB) for alignment generation
+
+To enable multimer support, uncomment the AlphaFold params download in the Dockerfile and rebuild:
+```dockerfile
+# In Dockerfile, uncomment:
+RUN bash /opt/openfold/scripts/download_alphafold_params.sh /opt/openfold
+```
+
+Then run inference with `--config_preset model_1_multimer_v3`. See [OpenFold Multimer Docs](https://openfold.readthedocs.io/en/latest/Multimer_Inference.html).
+
+---
+
+### About Database Requirements
+
+| Mode | Databases Required | Size |
+|------|-------------------|------|
+| **SoloSeq** (recommended) | None (uses ESM embeddings) | 0 |
+| Standard with precomputed alignments | None (alignments provided) | 0 |
+| Standard with alignment generation | UniRef90, MGnify, BFD, UniRef30, PDB70 | ~2.5 TB |
+| Multimer with alignment generation | Above + UniProt, PDB SeqRes | ~2.5 TB |
+
+> **Why we benchmark with SoloSeq and precomputed alignments**: The full alignment databases are massive (~2.5TB). This Docker image includes example data with precomputed alignments, allowing you to run benchmarks immediately without downloading terabytes of data.
 
 > **Note**: Total time includes Docker container startup, model loading, and template downloading. For batch processing, consider keeping the container running to amortize startup costs.
 

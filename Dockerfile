@@ -151,6 +151,13 @@ RUN pip install --no-cache-dir fair-esm && \
 RUN python3 -c "import esm; esm.pretrained.esm1b_t33_650M_UR50S()"
 
 # -----------------------------------------------------------------------------
+# AlphaFold Multimer Weights (OPTIONAL - adds ~1.5GB)
+# -----------------------------------------------------------------------------
+# Uncomment the following to enable multimer inference (protein complexes).
+# NOTE: Multimer also requires precomputed alignments or massive databases (~2.5TB).
+# RUN bash /opt/openfold/scripts/download_alphafold_params.sh /opt/openfold
+
+# -----------------------------------------------------------------------------
 # Example Templates
 # -----------------------------------------------------------------------------
 # OPTIONAL: Comment out to skip downloading example templates (saves space/time)
