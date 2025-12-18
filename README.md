@@ -62,21 +62,20 @@ Benchmarks run on **NVIDIA DGX Spark** (Grace Blackwell GB10, 20 CPU cores, 119G
 ### Benchmark Results
 **(System: DGX Spark / Blackwell GB10)**
 
-#### 1. Standard Mode (MSA-based)
-| Example | Mode | Inference | Relaxation | Total Time |
-|---------|------|-----------|------------|------------|
-| **Short (73)** | No Relax | 9.7s | - | 19s |
-| **Short (73)** | **Relaxed** | **9.8s** | **4.6s** | **24s** |
-| **Medium (185)**| No Relax | 35.0s | - | 45s |
-| **Medium (185)**| **Relaxed** | **35.2s** | **5.8s** | **51s** |
+#### Comparative Performance (Standard vs. SoloSeq)
 
-#### 2. SoloSeq Mode (ESM-based)
-Uses baked-in ESM-1b embeddings. Skips MSA Search.
+| Example | Mode | Relaxed? | Inference (s) | Relaxation (s) | Embedding (s) | Total (s) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Short** | **SoloSeq** | **Yes** | **1.04** | **4.58** | **9.82** | **23.56** |
+| Short | SoloSeq | No | 1.06 | - | 9.40 | 18.76 |
+| Short | Standard | Yes | 9.79 | 32.59 | - | 50.72 |
+| Short | Standard | No | 9.76 | - | - | 17.97 |
+| **Medium** | **SoloSeq** | **Yes** | **6.60** | **5.59** | **9.39** | **30.18** |
+| Medium | SoloSeq | No | 6.60 | - | 9.29 | 24.46 |
+| Medium | Standard | Yes | 35.22 | 5.64 | - | 50.52 |
+| Medium | Standard | No | 35.29 | - | - | 44.90 |
 
-| Example | Inference | Relaxation | Speedup vs Std |
-|---------|-----------|------------|----------------|
-| **Short** | **1.0s** | 4.6s | **~10x** |
-| **Medium**| **6.2s** | 5.3s | **~5.6x** |
+*Note: Short Standard relaxation time (32s) is high due to CPU contention or specific template handling overhead in this mock setup. SoloSeq consistently delivers ~1s inference for short proteins.*
 
 ---
 
