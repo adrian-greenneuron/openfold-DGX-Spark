@@ -141,12 +141,12 @@ Then run inference with `--config_preset model_1_multimer_v3`. See [OpenFold Mul
 
 | Mode | Databases Required | Size |
 |------|-------------------|------|
-| **SoloSeq** (recommended) | None (uses ESM embeddings) | 0 |
+| **SoloSeq** (recommended) | ESM-1b model (baked into image) | ~2.5 GB |
 | Standard with precomputed alignments | None (alignments provided) | 0 |
 | Standard with alignment generation | UniRef90, MGnify, BFD, UniRef30, PDB70 | ~2.5 TB |
 | Multimer with alignment generation | Above + UniProt, PDB SeqRes | ~2.5 TB |
 
-> **Why we benchmark with SoloSeq and precomputed alignments**: The full alignment databases are massive (~2.5TB). This Docker image includes example data with precomputed alignments, allowing you to run benchmarks immediately without downloading terabytes of data.
+> **Why we benchmark with SoloSeq and precomputed alignments**: The full alignment databases are massive (~2.5TB). This Docker image includes the ESM-1b model (~2.5GB) and example data with precomputed alignments, allowing you to run benchmarks immediately without downloading terabytes of data.
 
 > **Note**: Total time includes Docker container startup, model loading, and template downloading. For batch processing, consider keeping the container running to amortize startup costs.
 
