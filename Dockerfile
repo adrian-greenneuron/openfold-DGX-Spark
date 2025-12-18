@@ -136,6 +136,8 @@ RUN mkdir -p /root/.triton/autotune
 # -----------------------------------------------------------------------------
 # Model Weights
 # -----------------------------------------------------------------------------
+# OPTIONAL: Comment out the following lines to build a lighter image without embedded weights.
+# You will need to mount weights at runtime if you skip this.
 # Download OpenFold model parameters from AWS S3 (public bucket, no auth required)
 RUN bash /opt/openfold/scripts/download_openfold_params.sh /opt/openfold
 
@@ -144,11 +146,13 @@ RUN pip install --no-cache-dir fair-esm && \
     bash /opt/openfold/scripts/download_openfold_soloseq_params.sh /opt/openfold
 
 # Pre-download ESM-1b weights for SoloSeq (bakes ~2.5GB model into image)
+# OPTIONAL: Comment this out to save ~2.5GB if you do not need SoloSeq baked in
 RUN python3 -c "import esm; esm.pretrained.esm1b_t33_650M_UR50S()"
 
 # -----------------------------------------------------------------------------
 # Example Templates
 # -----------------------------------------------------------------------------
+# OPTIONAL: Comment out to skip downloading example templates (saves space/time)
 # Download mmCIF templates required for the monomer example (6KWC)
 # This allows the example to run out-of-the-box without mounting external templates
 COPY scripts/download_example_templates.sh /opt/openfold/scripts/
