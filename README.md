@@ -59,23 +59,23 @@ Benchmarks run on **NVIDIA DGX Spark** (Grace Blackwell GB10, 20 CPU cores, 119G
 
 *Benchmark date: 2025-12-18*
 
-### Benchmark Results
-**(System: DGX Spark / Blackwell GB10)**
-
-#### Comparative Performance (Standard vs. SoloSeq)
+### Comparative Performance (Standard vs. SoloSeq)
 
 | Example | Mode | Relaxed? | Inference (s) | Relaxation (s) | Embedding (s) | Total (s) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Short** | **SoloSeq** | **Yes** | **1.04** | **4.58** | **9.82** | **23.56** |
-| Short | SoloSeq | No | 1.06 | - | 9.40 | 18.76 |
-| Short | Standard | Yes | 9.79 | 32.59 | - | 50.72 |
-| Short | Standard | No | 9.76 | - | - | 17.97 |
-| **Medium** | **SoloSeq** | **Yes** | **6.60** | **5.59** | **9.39** | **30.18** |
-| Medium | SoloSeq | No | 6.60 | - | 9.29 | 24.46 |
-| Medium | Standard | Yes | 35.22 | 5.64 | - | 50.52 |
-| Medium | Standard | No | 35.29 | - | - | 44.90 |
+| **Short (2Q2K, 35 res)** | Standard | Yes | 9.74 | 30.98 | - | 50.5 |
+| Short | Standard | No | 9.66 | - | - | 19.2 |
+| **Short** | **SoloSeq** | **Yes** | **1.06** | **4.62** | **10.8** | **24.5** |
+| Short | SoloSeq | No | 1.07 | - | 11.3 | 20.3 |
+| **Medium (6KWC, 152 res)** | Standard | Yes | 35.70 | 5.59 | - | 51.2 |
+| Medium | Standard | No | 35.19 | - | - | 45.1 |
+| **Medium** | **SoloSeq** | **Yes** | **6.59** | **5.60** | **10.7** | **31.0** |
+| Medium | SoloSeq | No | 6.59 | - | 11.2 | 26.1 |
 
-*Note: Short Standard relaxation time (32s) is high due to CPU contention or specific template handling overhead in this mock setup. SoloSeq consistently delivers ~1s inference for short proteins.*
+**Key Observations:**
+- **SoloSeq is 5-9x faster** for inference (1s vs 10s for Short, 6.5s vs 35s for Medium)
+- **Relaxation adds ~5-30s** depending on protein size and template complexity
+- **ESM embedding generation** takes ~11s (one-time cost, can be batched)
 
 ---
 
