@@ -76,28 +76,34 @@ ENV CUTLASS_PATH=/opt/cutlass
 RUN git clone https://github.com/aqlaboratory/openfold.git /opt/openfold
 
 # -----------------------------------------------------------------------------
-# OpenMM & pdbfixer (ARM64 via Conda)
 # -----------------------------------------------------------------------------
-# OpenMM builds for ARM64 are only reliably available via conda-forge.
-# We install Miniconda, create an env, and point the system Python to it.
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O /tmp/miniconda.sh \
-    && bash /tmp/miniconda.sh -b -p /opt/conda \
-    && rm /tmp/miniconda.sh
+# OpenMM (Source Build for Blackwell/sm_120 Support)
+# -----------------------------------------------------------------------------
+# Conda binaries are incompatible with Blackwell driver (PTX error).
+# We must build from source linking against the local CUDA toolkit.
 
-# Install openmm and pdbfixer into a clean env matching the system python version (3.12)
-# We use --override-channels to STRICTLY use conda-forge and avoid Anaconda ToS errors
-RUN /opt/conda/bin/conda create -n openmm -y --override-channels -c conda-forge python=3.12 openmm pdbfixer
+# Install build dependencies
+RUN apt-get update && apt-get install -y git cmake doxygen swig wget && \
+    rm -rf /var/lib/apt/lists/*
 
-# Remove numpy and scipy from conda environment to avoid conflicts with NGC's optimized versions
-# OpenMM will use the system numpy/scipy instead
-RUN rm -rf /opt/conda/envs/openmm/lib/python3.12/site-packages/numpy* \
-    && rm -rf /opt/conda/envs/openmm/lib/python3.12/site-packages/scipy*
+# Build OpenMM from source
+WORKDIR /tmp
+RUN git clone https://github.com/openmm/openmm.git && \
+    cd openmm && \
+    mkdir build && cd build && \
+    cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda && \
+    make -j$(nproc) install && \
+    cd python && OPENMM_INCLUDE_PATH=/usr/local/include OPENMM_LIB_PATH=/usr/local/lib python3 setup.py install && \
+    cd ../.. && rm -rf openmm
 
-# Add Conda libraries to System Python path
-# This allows the optimized NGC PyTorch (system python) to import module from Conda
-ENV PYTHONPATH="/opt/conda/envs/openmm/lib/python3.12/site-packages"
-# Add Conda shared libraries to LD_LIBRARY_PATH (needed for OpenMM C++ backend)
-ENV LD_LIBRARY_PATH="/opt/conda/envs/openmm/lib:$LD_LIBRARY_PATH"
+# Install pdbfixer from source
+RUN pip install git+https://github.com/openmm/pdbfixer.git
+
+# Install other dependencies
+RUN pip install biopython dm-tree ml-collections scipy
+
+# Remove LD_LIBRARY_PATH hack as we installed to system locations
+
 
 WORKDIR /opt/openfold
 # RUN python3 /opt/patch_openfold.py # Skipping patch, using real install
@@ -108,8 +114,13 @@ WORKDIR /opt/openfold
 # Patch setup.py to add Blackwell compute capability since there's no GPU at build time
 RUN sed -i "s/compute_capabilities = set(\[/compute_capabilities = set([(12, 0),/" setup.py
 ENV TORCH_CUDA_ARCH_LIST="12.0"
-RUN pip install --no-build-isolation .
+# Fix missing stereo_chemical_props.txt (required for relaxation)
+# OpenFold expects this file in openfold/resources but it might be missing from the pip install
+RUN mkdir -p openfold/resources && \
+    wget https://git.scicore.unibas.ch/schwede/openstructure/-/raw/7102c63615b64735c4941278d92b554ec94415f8/modules/mol/alg/src/stereo_chemical_props.txt \
+    -O openfold/resources/stereo_chemical_props.txt
 
+RUN pip install --no-build-isolation .
 # Install awscli for downloading model weights
 RUN pip install --no-cache-dir awscli
 
