@@ -9,7 +9,7 @@ mkdir -p "$WORK_DIR/fasta_short" "$WORK_DIR/fasta_medium" "$WORK_DIR/output" "$W
 
 echo "Extracting inputs from image..."
 # Use a temporary container to extract files
-id=$(docker create openfold-dgx-spark:latest)
+id=$(docker create openfold-spark:cuda13)
 docker cp $id:/opt/openfold/tests/test_data/short.fasta "$WORK_DIR/fasta_short/2Q2K.fasta"
 docker cp $id:/opt/openfold/examples/monomer/fasta_dir/6kwc.fasta "$WORK_DIR/fasta_medium/6KWC_1.fasta"
 docker rm -v $id
@@ -50,7 +50,7 @@ run_bench() {
         docker run --gpus all --ipc=host --shm-size=64g \
             -v "$FASTA_DIR":/fasta_dir \
             -v "$WORK_DIR/embeddings":/embeddings \
-            openfold-dgx-spark:latest \
+            openfold-spark:cuda13 \
             python3 /opt/openfold/scripts/precompute_embeddings.py \
             /fasta_dir /embeddings > /dev/null 2>&1
         end_emb=$(date +%s.%N)
@@ -72,7 +72,7 @@ run_bench() {
             -v "$FASTA_DIR":/fasta_dir \
             -v "$WORK_DIR/embeddings":/embeddings \
             -v "$OUT_DIR":/output \
-            openfold-dgx-spark:latest \
+            openfold-spark:cuda13 \
             python3 run_pretrained_openfold.py \
             /fasta_dir \
             /opt/openfold/examples/monomer/template_mmcif \
@@ -143,7 +143,7 @@ run_bench() {
             RUN_CMD="$RUN_CMD -v $WORK_DIR/alignments_short:/alignments_short"
         fi
         
-        RUN_CMD="$RUN_CMD openfold-dgx-spark:latest \
+        RUN_CMD="$RUN_CMD openfold-spark:cuda13 \
             python3 run_pretrained_openfold.py \
             /fasta_dir \
             /opt/openfold/examples/monomer/template_mmcif \
@@ -169,7 +169,7 @@ run_bench() {
 
 # Extraction of Short Alignments
 echo "Extracting Short Alignments..."
-id=$(docker create openfold-dgx-spark:latest)
+id=$(docker create openfold-spark:cuda13)
 # The directory is tests/test_data/alignments
 docker cp $id:/opt/openfold/tests/test_data/alignments "$WORK_DIR/alignments_short"
 docker rm -v $id
