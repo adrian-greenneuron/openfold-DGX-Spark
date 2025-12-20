@@ -23,11 +23,11 @@ This build solves:
 git clone https://github.com/adriancarr/openfold-DGX-Spark.git
 cd openfold-DGX-Spark
 
-# Checkout CUDA 13 branch
-git checkout CUDA13
+# Build with the build script (recommended)
+./build.sh
 
-# Build (takes ~25-30 minutes including model downloads)
-docker build -t openfold-spark:cuda13 .
+# Or build manually (takes ~25-30 minutes including model downloads)
+# docker build -t openfold-spark:cuda13 .
 ```
 
 ### 2. Run Inference
@@ -167,6 +167,7 @@ Then run inference with `--config_preset model_1_multimer_v3`. See [OpenFold Mul
 ## Repository Structure
 
 - `Dockerfile`: The complete build recipe with all Blackwell fixes
+- `build.sh`: Build script with BuildKit, timing, and optional testing
 - `patch_ds.py`: DeepSpeed patch for sm_121 → sm_120 mapping
 - `scripts/benchmark_full.sh`: Standard benchmark script
 - `scripts/benchmark_with_memory.sh`: Benchmark script with memory tracking

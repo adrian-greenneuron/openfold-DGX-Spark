@@ -1,2 +1,47 @@
-openfold3-DGX-Spark/
+# OpenFold DGX Spark - Build Artifacts
+output/
+predictions/
+embeddings/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+*.egg
+.mypy_cache/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Build
+build/
+dist/
+
+# Temporary
 temp_fix/
+*.tmp
+*.temp
+
+# Large files
+*.pdb
+*.cif
+*.pt
+*.ckpt
+
+# Nested repos (if cloned inside)
+openfold3-DGX-Spark/
+
+# Docker
+*.tar
