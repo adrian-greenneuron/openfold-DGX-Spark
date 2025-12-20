@@ -20,7 +20,7 @@ This build solves:
 
 ```bash
 # Clone this repository
-git clone https://github.com/adriancarr/openfold-DGX-Spark.git
+git clone https://github.com/adrian-greenneuron/openfold-DGX-Spark.git
 cd openfold-DGX-Spark
 
 # Build with the build script (recommended)
