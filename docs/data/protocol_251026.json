@@ -1,0 +1,36 @@
+{
+  "study_id": "openfold-rebuild-251026",
+  "conditions": [
+    "original",
+    "rebuilt-original",
+    "current-upstream"
+  ],
+  "original_image": "sha256:ef325cee635c55fab17c4cfc716a4b570641ccbf2a4c918ff1eb37ccb8b02517",
+  "source_commit": "be2ec1841f16c966c65ae0e7599ebbadc725757d",
+  "esm_commit": "2b369911bb5b4b0dda914521b9475cad1656b2ac",
+  "inputs": {
+    "short": {
+      "identifier": "2q2k_A",
+      "residues": 73
+    },
+    "medium": {
+      "identifier": "6KWC_1",
+      "residues": 191
+    }
+  },
+  "readme_label_correction": "The published benchmark script and retained image use 73 and 191 residues, not the README labels of 35 and 152.",
+  "warmups": 1,
+  "measured_repetitions": 2,
+  "data_random_seed": 42,
+  "embedding_torch_seed": 43,
+  "allocator": "expandable_segments:True",
+  "model_settings": "Original upstream preset defaults (TF32; no extra acceleration flags); relaxation toggled as in the README.",
+  "solo_embeddings": "All inference conditions use original run1 embeddings; embedding generation is timed and compared separately for each runtime.",
+  "downloads": "No runtime downloads, live MSA searches, private data or large alignment databases.",
+  "measurement_source_hashes": {
+    "measure_cli.py": "c5f000198018a21d341847973a8370d0f8747e7f27a4e335d982d88fbbb49089",
+    "benchmark.py": "afd54761febf6d51a810f819b5b49e25bd759c37cc4ab0887da0d5f1bdbefabe",
+    "capture_runtime.py": "f40c38b7ca6c31d902d2006d1ba2e01cb379f1133558a0ddd33171a36db848dd"
+  },
+  "gpu_execution": "Sequential conditions, no overlapping builds or other GPU work; no deletion during qualification."
+}

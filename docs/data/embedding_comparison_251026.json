@@ -1,0 +1,134 @@
+[
+  {
+    "protein": "short",
+    "condition": "original",
+    "replicate": 1,
+    "shape": [
+      73,
+      1280
+    ],
+    "identical_tensors": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "protein": "short",
+    "condition": "original",
+    "replicate": 2,
+    "shape": [
+      73,
+      1280
+    ],
+    "identical_tensors": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "protein": "short",
+    "condition": "rebuilt",
+    "replicate": 1,
+    "shape": [
+      73,
+      1280
+    ],
+    "identical_tensors": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "protein": "short",
+    "condition": "rebuilt",
+    "replicate": 2,
+    "shape": [
+      73,
+      1280
+    ],
+    "identical_tensors": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "protein": "short",
+    "condition": "modern",
+    "replicate": 1,
+    "shape": [
+      73,
+      1280
+    ],
+    "identical_tensors": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "protein": "short",
+    "condition": "modern",
+    "replicate": 2,
+    "shape": [
+      73,
+      1280
+    ],
+    "identical_tensors": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "protein": "medium",
+    "condition": "original",
+    "replicate": 1,
+    "shape": [
+      191,
+      1280
+    ],
+    "identical_tensors": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "protein": "medium",
+    "condition": "original",
+    "replicate": 2,
+    "shape": [
+      191,
+      1280
+    ],
+    "identical_tensors": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "protein": "medium",
+    "condition": "rebuilt",
+    "replicate": 1,
+    "shape": [
+      191,
+      1280
+    ],
+    "identical_tensors": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "protein": "medium",
+    "condition": "rebuilt",
+    "replicate": 2,
+    "shape": [
+      191,
+      1280
+    ],
+    "identical_tensors": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "protein": "medium",
+    "condition": "modern",
+    "replicate": 1,
+    "shape": [
+      191,
+      1280
+    ],
+    "identical_tensors": true,
+    "max_absolute_difference": 0.0
+  },
+  {
+    "protein": "medium",
+    "condition": "modern",
+    "replicate": 2,
+    "shape": [
+      191,
+      1280
+    ],
+    "identical_tensors": true,
+    "max_absolute_difference": 0.0
+  }
+]

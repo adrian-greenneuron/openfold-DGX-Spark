@@ -1,0 +1,21 @@
+{
+  "completed": true,
+  "offline": true,
+  "image": "openfold-official-spark:2.2.0-251026",
+  "predictions": [
+    {
+      "mode": "default",
+      "expected_residues": 191,
+      "observed_residues": 191,
+      "pdb": "6KWC_1_model_1_ptm_unrelaxed.pdb"
+    },
+    {
+      "mode": "soloseq",
+      "expected_residues": 73,
+      "observed_residues": 73,
+      "pdb": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb"
+    }
+  ],
+  "embedding_file_count": 1,
+  "service_exit_code": 0
+}

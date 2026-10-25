@@ -1,0 +1,11 @@
+{
+  "source_mismatches": [],
+  "weight_mismatches": [],
+  "version_mismatches": {},
+  "extra_distributions": {},
+  "source_files_checked": 140,
+  "weights_checked": 16,
+  "distributions_checked": 278,
+  "stereo_chemical_props_match": true,
+  "matches": true
+}

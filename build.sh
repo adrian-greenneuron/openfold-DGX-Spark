@@ -7,6 +7,7 @@
 # =============================================================================
 
 set -euo pipefail
+cd -- "$(dirname -- "${BASH_SOURCE[0]}")"
 
 # Configuration
 IMAGE_NAME="${IMAGE_NAME:-openfold-spark}"
@@ -125,6 +126,7 @@ info "Starting Docker build..."
 BUILD_START=$(date +%s)
 
 docker build \
+    --pull \
     ${NO_CACHE} \
     -t "${FULL_IMAGE}" \
     -f "${DOCKERFILE}" \

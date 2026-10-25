@@ -2,7 +2,7 @@
 
 This repository provides a specialized Docker deployment for running **OpenFold** (AlphaFold2) on the NVIDIA DGX Spark system, powered by **Grace Blackwell (GB10)** GPUs and **ARM64** architecture.
 
-> **Looking for OpenFold3?** See [openfold3-DGX-Spark](https://github.com/adriancarr/openfold3-DGX-Spark)
+> **Looking for OpenFold3?** See [openfold3-DGX-Spark](https://github.com/adrian-greenneuron/openfold3-DGX-Spark)
 
 ## Why This Exists
 
@@ -13,6 +13,22 @@ This build solves:
 - **DeepSpeed Fixes**: Patches DeepSpeed to correctly parse sm_121 architecture
 - **OpenMM Source Build**: Builds OpenMM and PDBFixer from source for full Blackwell GPU relaxation support
 - **CUDA 13 Support**: Uses NGC 25.11 with native CUDA 13.0, Triton 3.5.0, and Flash Attention 2.7.4
+
+## Rebuild verification and current development
+
+The original deployment remains the default. A no-cache rebuild and a separate
+[dependency-modernised branch](https://github.com/adrian-greenneuron/openfold-DGX-Spark/tree/official/openfold-spark)
+were tested on 25 October 2026. They use the same upstream OpenFold revision and
+model weights. See the [current benchmark tables](docs/openfold_benchmarks_251026.md)
+and [rebuild and repeatability guide](docs/reproducibility.md).
+
+The actual example proteins contain **73 and 191 residues**; the previous labels
+of 35 and 152 were incorrect. The older results below remain dated historical
+measurements. Current controlled measurements are reported separately.
+
+Unrelaxed predictions matched exactly in the tested comparisons. **GPU relaxation
+is not guaranteed repeatable**, including in the original image. The guide gives
+an opt-in verification procedure that explicitly skips relaxation.
 
 ## Quick Start
 
@@ -66,11 +82,11 @@ Benchmarks run on **NVIDIA DGX Spark** (Grace Blackwell GB10, 20 CPU cores, 119G
 
 | Example | Mode | Relaxed | Inference (s) | Relaxation (s) | Total (s) | Peak Memory (GB) | Memory Used (GB) |
 |---------|------|---------|---------------|----------------|-----------|------------------|------------------|
-| **Short (35 res)** | Standard | Yes | 9.90 | 19.28 | 39.4 | 10.9 | +5.6 |
+| **Short (73 res)** | Standard | Yes | 9.90 | 19.28 | 39.4 | 10.9 | +5.6 |
 | Short | Standard | No | 9.87 | - | 20.7 | 10.7 | +5.4 |
 | **Short** | **SoloSeq** | **Yes** | **1.13** | **3.52** | **25.7** | 8.7 | +2.9 |
 | Short | SoloSeq | No | 1.10 | - | 21.7 | 8.1 | +2.6 |
-| **Medium (152 res)** | Standard | Yes | 34.49 | 4.54 | 49.2 | 14.8 | +9.4 |
+| **Medium (191 res)** | Standard | Yes | 34.49 | 4.54 | 49.2 | 14.8 | +9.4 |
 | Medium | Standard | No | 34.57 | - | 45.7 | 14.5 | +9.1 |
 | **Medium** | **SoloSeq** | **Yes** | **6.56** | **4.48** | **31.3** | 9.0 | +3.2 |
 | Medium | SoloSeq | No | 6.58 | - | 26.3 | 8.6 | +3.1 |
@@ -94,7 +110,7 @@ Benchmarks run on **NVIDIA DGX Spark** (Grace Blackwell GB10, 20 CPU cores, 119G
 ---
 
 ### Run in SoloSeq Mode
-OpenFold supports a "SoloSeq" mode using **ESM-1b embeddings**, offering a faster alternative that skips MSA generation. The ESM-1b model (~2.5GB) is now **baked into the Docker image**, so no internet is required at runtime.
+OpenFold supports a "SoloSeq" mode using **ESM-1b embeddings**, offering a faster alternative that skips MSA generation. The ESM-1b checkpoint (~7.83 GB on disk) is now **baked into the Docker image**, so no internet is required at runtime.
 
 To run SoloSeq, use the **Split Workflow**:
 
@@ -155,12 +171,12 @@ Then run inference with `--config_preset model_1_multimer_v3`. See [OpenFold Mul
 
 | Mode | Databases Required | Size |
 |------|-------------------|------|
-| **SoloSeq** (recommended) | ESM-1b model (baked into image) | ~2.5 GB |
+| **SoloSeq** (recommended) | ESM-1b checkpoint (baked into image) | ~7.83 GB |
 | Standard with precomputed alignments | None (alignments provided) | 0 |
 | Standard with alignment generation | UniRef90, MGnify, BFD, UniRef30, PDB70 | ~2.5 TB |
 | Multimer with alignment generation | Above + UniProt, PDB SeqRes | ~2.5 TB |
 
-> **Why we benchmark with SoloSeq and precomputed alignments**: The full alignment databases are massive (~2.5TB). This Docker image includes the ESM-1b model (~2.5GB) and example data with precomputed alignments, allowing you to run benchmarks immediately without downloading terabytes of data.
+> **Why we benchmark with SoloSeq and precomputed alignments**: The full alignment databases are massive (~2.5TB). This Docker image includes the ESM-1b checkpoint (~7.83 GB on disk) and example data with precomputed alignments, allowing you to run benchmarks immediately without downloading terabytes of data.
 
 > **Note**: Total time includes Docker container startup, model loading, and template downloading. For batch processing, consider keeping the container running to amortize startup costs.
 
@@ -169,7 +185,6 @@ Then run inference with `--config_preset model_1_multimer_v3`. See [OpenFold Mul
 - `Dockerfile`: The complete build recipe with all Blackwell fixes
 - `build.sh`: Build script with BuildKit, timing, and optional testing
 - `patch_ds.py`: DeepSpeed patch for sm_121 → sm_120 mapping
-- `scripts/benchmark_full.sh`: Standard benchmark script
 - `scripts/benchmark_with_memory.sh`: Benchmark script with memory tracking
 - `README.md`: This file
 
@@ -182,8 +197,8 @@ Then run inference with `--config_preset model_1_multimer_v3`. See [OpenFold Mul
 - **Flash Attention**: 2.7.4 (NGC built-in)
 - **CUTLASS**: 4.0.0 (NGC built-in at `/opt/pytorch/ao/third_party/cutlass`)
 - **DeepSpeed**: 0.15.4 (pinned, with sm_121 patch)
-- **OpenMM**: Latest Source (Master) (Built for Blackwell relaxation)
-- **Model Weights**: 10 checkpoints embedded (~3.5 GB)
+- **OpenMM**: Pinned source revision `07b738c` (built for Blackwell relaxation)
+- **Model Weights**: 10 Standard checkpoints (~3.74 GB), two SoloSeq checkpoints (~1.21 GB), and ESM-1b (~7.83 GB) embedded
 
 ### Key Fixes Applied
 
