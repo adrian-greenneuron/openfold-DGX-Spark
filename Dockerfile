@@ -8,7 +8,7 @@
 # - Significantly faster build time
 # =============================================================================
 # hadolint ignore=DL3006
-FROM nvcr.io/nvidia/pytorch:25.11-py3
+FROM nvcr.io/nvidia/pytorch:25.11-py3@sha256:417cbf33f87b5378849df37983552cd1f8bc8b62fe1ceabe004de816a55dff21
 
 # -----------------------------------------------------------------------------
 # Build Configuration
@@ -29,18 +29,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     hmmer \
     kalign \
     aria2 \
-    pdb2pqr \
-    openbabel \
-    cmake \
-    doxygen \
-    swig \
+    libaio-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # -----------------------------------------------------------------------------
 # Python Dependencies
 # -----------------------------------------------------------------------------
+COPY runtime-constraints.txt /opt/runtime-constraints.txt
 # hadolint ignore=DL3013
-RUN pip install --no-cache-dir \
+RUN pip install --no-cache-dir -c /opt/runtime-constraints.txt \
     biopython \
     ml-collections \
     pyyaml \
@@ -53,15 +50,8 @@ RUN pip install --no-cache-dir \
     biotite \
     cuda-python
 
-# -----------------------------------------------------------------------------
-# DeepSpeed (Patched for Blackwell)
-# -----------------------------------------------------------------------------
-# Pin to 0.15.4 and patch builder.py to fix Blackwell sm_121 detection
-# DeepSpeed is NOT included in NGC 25.11 - we must install and patch it
-COPY patch_ds.py /opt/patch_ds.py
-RUN pip install --no-cache-dir deepspeed==0.15.4 \
-    && python3 /opt/patch_ds.py \
-    && rm /opt/patch_ds.py
+# Current released DeepSpeed; no builder.py patch is applied.
+RUN pip install --no-cache-dir -c /opt/runtime-constraints.txt deepspeed==0.19.8
 
 # -----------------------------------------------------------------------------
 # NGC Built-in Components (No Installation Required)
@@ -79,52 +69,35 @@ RUN pip install --no-cache-dir deepspeed==0.15.4 \
 # -----------------------------------------------------------------------------
 WORKDIR /opt
 RUN git clone https://github.com/aqlaboratory/openfold.git /opt/openfold \
+    && git -C /opt/openfold checkout --detach be2ec1841f16c966c65ae0e7599ebbadc725757d \
     && rm -rf /opt/openfold/.git
 
-# -----------------------------------------------------------------------------
-# OpenMM (Source Build for Blackwell/sm_120 Support)
-# -----------------------------------------------------------------------------
-# Conda binaries are incompatible with Blackwell driver (PTX error).
-# We must build from source linking against the local CUDA toolkit.
-WORKDIR /tmp
-# hadolint ignore=DL3003,SC2046
-RUN git clone https://github.com/openmm/openmm.git \
-    && cd openmm \
-    && mkdir build && cd build \
-    && cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda \
-    && make -j"$(nproc)" install \
-    && cd python && OPENMM_INCLUDE_PATH=/usr/local/include OPENMM_LIB_PATH=/usr/local/lib python3 setup.py install \
-    && cd /tmp && rm -rf openmm
-
-# Install pdbfixer from source
-# hadolint ignore=DL3013
-RUN pip install --no-cache-dir git+https://github.com/openmm/pdbfixer.git
+# Published ARM64 wheels replace the historical custom OpenMM/PDBFixer builds.
+RUN pip install --no-cache-dir -c /opt/runtime-constraints.txt "openmm[cuda13]==8.6.1" pdbfixer==1.12.0
 
 # -----------------------------------------------------------------------------
 # OpenFold Installation
 # -----------------------------------------------------------------------------
 WORKDIR /opt/openfold
 
-# Patch setup.py to add Blackwell compute capability since there's no GPU at build time
+# Upstream setup.py already includes sm_120 for CUDA 13.
 # Fix missing stereo_chemical_props.txt (required for relaxation)
 # Install OpenFold (--no-build-isolation required for torch access)
 # Install awscli for downloading model weights
 # hadolint ignore=DL3013
-RUN sed -i "s/compute_capabilities = set(\[/compute_capabilities = set([(12, 0),/" setup.py \
-    && mkdir -p openfold/resources \
+RUN mkdir -p openfold/resources \
     && wget -q --progress=dot:giga https://git.scicore.unibas.ch/schwede/openstructure/-/raw/7102c63615b64735c4941278d92b554ec94415f8/modules/mol/alg/src/stereo_chemical_props.txt \
     -O openfold/resources/stereo_chemical_props.txt \
-    && pip install --no-cache-dir --no-build-isolation . \
-    && pip install --no-cache-dir awscli
+    && echo "24510899eeb49167cffedec8fa45363a4d08279c0c637a403b452f7d0ac09451  openfold/resources/stereo_chemical_props.txt" | sha256sum --check - \
+    && pip install --no-cache-dir -c /opt/runtime-constraints.txt --no-build-isolation . \
+    && pip install --no-cache-dir -c /opt/runtime-constraints.txt awscli
 
 # -----------------------------------------------------------------------------
 # Code Fixes for CUDA 13 Compatibility
 # -----------------------------------------------------------------------------
-# Fix SyntaxWarning: invalid escape sequence '\W' in script_utils.py
 # Fix cuda-python 13.x import structure change (cuda.cudart -> cuda.bindings.runtime)
 # Pre-create cache directories to silence Triton warnings
-RUN sed -i "s/re.split('\\\\W| \\\\|'/re.split(r'\\\\W| \\\\|'/g" /opt/openfold/openfold/utils/script_utils.py \
-    && sed -i 's/import cuda.cudart as cudart/from cuda.bindings import runtime as cudart/g' /opt/openfold/openfold/utils/tensorrt_lazy_compiler.py \
+RUN sed -i 's/import cuda.cudart as cudart/from cuda.bindings import runtime as cudart/g' /opt/openfold/openfold/utils/tensorrt_lazy_compiler.py \
     && mkdir -p /root/.triton/autotune
 
 # -----------------------------------------------------------------------------
@@ -134,12 +107,19 @@ RUN sed -i "s/re.split('\\\\W| \\\\|'/re.split(r'\\\\W| \\\\|'/g" /opt/openfold/
 # You will need to mount weights at runtime if you skip this.
 # Download OpenFold model parameters from AWS S3 (public bucket, no auth required)
 # Install fair-esm (required for SoloSeq) and download SoloSeq parameters
-# Pre-download ESM-1b weights for SoloSeq (bakes ~2.5GB model into image)
+# Pre-download the ESM-1b checkpoint (~7.83 GB on disk).
 # hadolint ignore=DL3013
 RUN bash /opt/openfold/scripts/download_openfold_params.sh /opt/openfold \
-    && pip install --no-cache-dir fair-esm \
+    && pip install --no-cache-dir -c /opt/runtime-constraints.txt fair-esm \
     && bash /opt/openfold/scripts/download_openfold_soloseq_params.sh /opt/openfold \
     && python3 -c "import esm; esm.pretrained.esm1b_t33_650M_UR50S()"
+
+# Freeze the ESM code too: upstream precompute_embeddings uses torch.hub's main
+# cache. Populating it makes the documented SoloSeq workflow work offline.
+RUN git clone https://github.com/facebookresearch/esm.git /root/.cache/torch/hub/facebookresearch_esm_main \
+    && git -C /root/.cache/torch/hub/facebookresearch_esm_main checkout --detach 2b369911bb5b4b0dda914521b9475cad1656b2ac
+COPY weights.sha256 /opt/weights.sha256
+RUN sha256sum --check /opt/weights.sha256
 
 # -----------------------------------------------------------------------------
 # AlphaFold Multimer Weights (OPTIONAL - adds ~1.5GB)
@@ -155,7 +135,9 @@ RUN bash /opt/openfold/scripts/download_openfold_params.sh /opt/openfold \
 # Download mmCIF templates required for the monomer example (6KWC)
 # This allows the example to run out-of-the-box without mounting external templates
 COPY scripts/download_example_templates.sh /opt/openfold/scripts/
-RUN bash /opt/openfold/scripts/download_example_templates.sh
+COPY example-templates.sha256 /opt/example-templates.sha256
+RUN bash /opt/openfold/scripts/download_example_templates.sh \
+    && sha256sum --check /opt/example-templates.sha256
 
 # -----------------------------------------------------------------------------
 # Validation & Runtime

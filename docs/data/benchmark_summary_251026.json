@@ -1,0 +1,242 @@
+[
+  {
+    "protein": "short",
+    "residues": 73,
+    "mode": "standard",
+    "relaxation": false,
+    "original": {
+      "workflow_wall_seconds": 19.865227510992554,
+      "inference_process_wall_seconds": 19.865227510992554,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3035607040,
+      "sampled_system_nonavailable_peak_bytes": 9461719040
+    },
+    "rebuilt": {
+      "workflow_wall_seconds": 19.838923357994645,
+      "inference_process_wall_seconds": 19.838923357994645,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3040866304,
+      "sampled_system_nonavailable_peak_bytes": 9632153600
+    },
+    "modern": {
+      "workflow_wall_seconds": 19.98261677850678,
+      "inference_process_wall_seconds": 19.98261677850678,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3069227008,
+      "sampled_system_nonavailable_peak_bytes": 9530789888
+    }
+  },
+  {
+    "protein": "short",
+    "residues": 73,
+    "mode": "standard",
+    "relaxation": true,
+    "original": {
+      "workflow_wall_seconds": 29.174940101001994,
+      "inference_process_wall_seconds": 29.174940101001994,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3217018880,
+      "sampled_system_nonavailable_peak_bytes": 9681240064
+    },
+    "rebuilt": {
+      "workflow_wall_seconds": 32.530796487480984,
+      "inference_process_wall_seconds": 32.530796487480984,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3221929984,
+      "sampled_system_nonavailable_peak_bytes": 9797029888
+    },
+    "modern": {
+      "workflow_wall_seconds": 43.038094435003586,
+      "inference_process_wall_seconds": 43.038094435003586,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3242254336,
+      "sampled_system_nonavailable_peak_bytes": 9726435328
+    }
+  },
+  {
+    "protein": "short",
+    "residues": 73,
+    "mode": "soloseq",
+    "relaxation": false,
+    "original": {
+      "workflow_wall_seconds": 16.56288232150837,
+      "inference_process_wall_seconds": 9.188049573509488,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 10926571520,
+      "sampled_system_nonavailable_peak_bytes": 15339532288
+    },
+    "rebuilt": {
+      "workflow_wall_seconds": 16.398457026021788,
+      "inference_process_wall_seconds": 8.979282800515648,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 10935922688,
+      "sampled_system_nonavailable_peak_bytes": 15486447616
+    },
+    "modern": {
+      "workflow_wall_seconds": 16.177176704019075,
+      "inference_process_wall_seconds": 8.799892750001163,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 11004329984,
+      "sampled_system_nonavailable_peak_bytes": 15549935616
+    }
+  },
+  {
+    "protein": "short",
+    "residues": 73,
+    "mode": "soloseq",
+    "relaxation": true,
+    "original": {
+      "workflow_wall_seconds": 20.107935650506988,
+      "inference_process_wall_seconds": 12.733102902508108,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 10926571520,
+      "sampled_system_nonavailable_peak_bytes": 15339532288
+    },
+    "rebuilt": {
+      "workflow_wall_seconds": 20.27285962451424,
+      "inference_process_wall_seconds": 12.8536853990081,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 10935922688,
+      "sampled_system_nonavailable_peak_bytes": 15486447616
+    },
+    "modern": {
+      "workflow_wall_seconds": 20.026963191019604,
+      "inference_process_wall_seconds": 12.649679237001692,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 11004329984,
+      "sampled_system_nonavailable_peak_bytes": 15549935616
+    }
+  },
+  {
+    "protein": "medium",
+    "residues": 191,
+    "mode": "standard",
+    "relaxation": false,
+    "original": {
+      "workflow_wall_seconds": 46.539718543499475,
+      "inference_process_wall_seconds": 46.539718543499475,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3134406656,
+      "sampled_system_nonavailable_peak_bytes": 12595998720
+    },
+    "rebuilt": {
+      "workflow_wall_seconds": 46.01915429998189,
+      "inference_process_wall_seconds": 46.01915429998189,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3137028096,
+      "sampled_system_nonavailable_peak_bytes": 12420268032
+    },
+    "modern": {
+      "workflow_wall_seconds": 45.579561164500774,
+      "inference_process_wall_seconds": 45.579561164500774,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3165343744,
+      "sampled_system_nonavailable_peak_bytes": 12371816448
+    }
+  },
+  {
+    "protein": "medium",
+    "residues": 191,
+    "mode": "standard",
+    "relaxation": true,
+    "original": {
+      "workflow_wall_seconds": 50.921671987496666,
+      "inference_process_wall_seconds": 50.921671987496666,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3435102208,
+      "sampled_system_nonavailable_peak_bytes": 12941647872
+    },
+    "rebuilt": {
+      "workflow_wall_seconds": 50.54756058299972,
+      "inference_process_wall_seconds": 50.54756058299972,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3436474368,
+      "sampled_system_nonavailable_peak_bytes": 13025042432
+    },
+    "modern": {
+      "workflow_wall_seconds": 50.477821425010916,
+      "inference_process_wall_seconds": 50.477821425010916,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3453198336,
+      "sampled_system_nonavailable_peak_bytes": 12794322944
+    }
+  },
+  {
+    "protein": "medium",
+    "residues": 191,
+    "mode": "soloseq",
+    "relaxation": false,
+    "original": {
+      "workflow_wall_seconds": 22.27138919099525,
+      "inference_process_wall_seconds": 14.841854341502767,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 10926555136,
+      "sampled_system_nonavailable_peak_bytes": 15538851840
+    },
+    "rebuilt": {
+      "workflow_wall_seconds": 22.4546239960182,
+      "inference_process_wall_seconds": 14.999228925516945,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 10935660544,
+      "sampled_system_nonavailable_peak_bytes": 15727816704
+    },
+    "modern": {
+      "workflow_wall_seconds": 22.171447003012872,
+      "inference_process_wall_seconds": 14.718023620502208,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 11003199488,
+      "sampled_system_nonavailable_peak_bytes": 15431118848
+    }
+  },
+  {
+    "protein": "medium",
+    "residues": 191,
+    "mode": "soloseq",
+    "relaxation": true,
+    "original": {
+      "workflow_wall_seconds": 26.992751188503462,
+      "inference_process_wall_seconds": 19.563216339010978,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 10926555136,
+      "sampled_system_nonavailable_peak_bytes": 15538851840
+    },
+    "rebuilt": {
+      "workflow_wall_seconds": 27.177825916500296,
+      "inference_process_wall_seconds": 19.722430845999043,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 10935660544,
+      "sampled_system_nonavailable_peak_bytes": 15727816704
+    },
+    "modern": {
+      "workflow_wall_seconds": 26.993396866018884,
+      "inference_process_wall_seconds": 19.53997348350822,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 11003199488,
+      "sampled_system_nonavailable_peak_bytes": 15431118848
+    }
+  }
+]

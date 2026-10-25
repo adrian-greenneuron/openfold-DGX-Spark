@@ -1,0 +1,3248 @@
+{
+  "original": [
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "embedding",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 7.616459111013683,
+      "system_nonavailable_baseline_bytes": 4528697344,
+      "sampled_system_nonavailable_peak_bytes": 15325536256,
+      "sampled_system_increase_peak_bytes": 10796838912,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 10926424064,
+      "container_memory_peak_bytes": 10764890112,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "embedding",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 7.437343861995032,
+      "system_nonavailable_baseline_bytes": 4528701440,
+      "sampled_system_nonavailable_peak_bytes": 15339532288,
+      "sampled_system_increase_peak_bytes": 10810830848,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 10926571520,
+      "container_memory_peak_bytes": 10763468800,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "embedding",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 7.312321634002728,
+      "system_nonavailable_baseline_bytes": 4519903232,
+      "sampled_system_nonavailable_peak_bytes": 15338889216,
+      "sampled_system_increase_peak_bytes": 10818985984,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 10926411776,
+      "container_memory_peak_bytes": 10764439552,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 21.30302080299589,
+      "system_nonavailable_baseline_bytes": 4728684544,
+      "sampled_system_nonavailable_peak_bytes": 9456484352,
+      "sampled_system_increase_peak_bytes": 4727799808,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.970521151000867
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3034746880,
+      "container_memory_peak_bytes": 2822025216,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 19.872571313986555,
+      "system_nonavailable_baseline_bytes": 4711559168,
+      "sampled_system_nonavailable_peak_bytes": 9405366272,
+      "sampled_system_increase_peak_bytes": 4693807104,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.941121224022936
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3035607040,
+      "container_memory_peak_bytes": 2442596352,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 19.857883707998553,
+      "system_nonavailable_baseline_bytes": 4617129984,
+      "sampled_system_nonavailable_peak_bytes": 9461719040,
+      "sampled_system_increase_peak_bytes": 4844589056,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.942414838995319
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3034533888,
+      "container_memory_peak_bytes": 2441986048,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 41.87264632698498,
+      "system_nonavailable_baseline_bytes": 4603326464,
+      "sampled_system_nonavailable_peak_bytes": 9705144320,
+      "sampled_system_increase_peak_bytes": 5101817856,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.951747869985411
+          }
+        },
+        {
+          "relaxation": 22.000014655000996
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        },
+        {
+          "file": "2q2k_A_model_1_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "a3caf6157e77203f8ec21e3348cd3805eff8263f61be71c7cf6e5a9c2d81522c"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3216494592,
+      "container_memory_peak_bytes": 2589904896,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 28.638767279015156,
+      "system_nonavailable_baseline_bytes": 4596482048,
+      "sampled_system_nonavailable_peak_bytes": 9681240064,
+      "sampled_system_increase_peak_bytes": 5084758016,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.94439654101734
+          }
+        },
+        {
+          "relaxation": 8.576640913001029
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        },
+        {
+          "file": "2q2k_A_model_1_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "24337f4384fa136f21b65aed21a3c51743ca89b06e809f7fb38376d441948ef6"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3215818752,
+      "container_memory_peak_bytes": 2565263360,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 29.711112922988832,
+      "system_nonavailable_baseline_bytes": 4561149952,
+      "sampled_system_nonavailable_peak_bytes": 9669386240,
+      "sampled_system_increase_peak_bytes": 5108236288,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.956721202004701
+          }
+        },
+        {
+          "relaxation": 9.533470343012596
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        },
+        {
+          "file": "2q2k_A_model_1_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "62c9d365a12998780485ea963503d020fc3afd26fba38f0d159230e436fbaba6"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3217018880,
+      "container_memory_peak_bytes": 2567970816,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 9.172868558991468,
+      "system_nonavailable_baseline_bytes": 4555952128,
+      "sampled_system_nonavailable_peak_bytes": 7781695488,
+      "sampled_system_increase_peak_bytes": 3225743360,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.0710599960002583
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2385149952,
+      "container_memory_peak_bytes": 1790599168,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 9.163601599022513,
+      "system_nonavailable_baseline_bytes": 4678336512,
+      "sampled_system_nonavailable_peak_bytes": 7637360640,
+      "sampled_system_increase_peak_bytes": 2959024128,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.0616188140120357
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2385301504,
+      "container_memory_peak_bytes": 1790418944,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 9.212497547996463,
+      "system_nonavailable_baseline_bytes": 4717117440,
+      "sampled_system_nonavailable_peak_bytes": 7660978176,
+      "sampled_system_increase_peak_bytes": 2943860736,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.0635028389806394
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2386059264,
+      "container_memory_peak_bytes": 1790320640,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 12.946000957977958,
+      "system_nonavailable_baseline_bytes": 4701138944,
+      "sampled_system_nonavailable_peak_bytes": 7790280704,
+      "sampled_system_increase_peak_bytes": 3089141760,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.0707000249822158
+          }
+        },
+        {
+          "relaxation": 3.678430438012583
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        },
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "e0982a624aa8b741132db7fa62baa7735ee8d65951b0a60ea29fdbf32a5ba14c"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2553225216,
+      "container_memory_peak_bytes": 1900589056,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 12.826171184016857,
+      "system_nonavailable_baseline_bytes": 4538908672,
+      "sampled_system_nonavailable_peak_bytes": 8172969984,
+      "sampled_system_increase_peak_bytes": 3634061312,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.05080255199573
+          }
+        },
+        {
+          "relaxation": 3.6322163389995694
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        },
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "9b44599e29080a2918010ca8d5dd722a93e424320feca8ab9c4bb4bb65806b41"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2554478592,
+      "container_memory_peak_bytes": 1900412928,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 12.640034620999359,
+      "system_nonavailable_baseline_bytes": 4855820288,
+      "sampled_system_nonavailable_peak_bytes": 8035229696,
+      "sampled_system_increase_peak_bytes": 3179409408,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.0655219840118662
+          }
+        },
+        {
+          "relaxation": 3.663211434002733
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        },
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "270334f0ef797ff836c711e5c57d139b10f49424ecb3710f3ecfc1a6950b7da9"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2553270272,
+      "container_memory_peak_bytes": 1900048384,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "embedding",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 7.518138765997719,
+      "system_nonavailable_baseline_bytes": 4644319232,
+      "sampled_system_nonavailable_peak_bytes": 15430008832,
+      "sampled_system_increase_peak_bytes": 10785689600,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 10926637056,
+      "container_memory_peak_bytes": 10764013568,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "embedding",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 7.52817990098265,
+      "system_nonavailable_baseline_bytes": 4718497792,
+      "sampled_system_nonavailable_peak_bytes": 15538851840,
+      "sampled_system_increase_peak_bytes": 10820354048,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 10926555136,
+      "container_memory_peak_bytes": 10764357632,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "embedding",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 7.3308897980023175,
+      "system_nonavailable_baseline_bytes": 4755304448,
+      "sampled_system_nonavailable_peak_bytes": 15532191744,
+      "sampled_system_increase_peak_bytes": 10776887296,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 10926538752,
+      "container_memory_peak_bytes": 10764525568,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 45.652657241997076,
+      "system_nonavailable_baseline_bytes": 4904681472,
+      "sampled_system_nonavailable_peak_bytes": 12341702656,
+      "sampled_system_increase_peak_bytes": 7437021184,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.44979185500415
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3133603840,
+      "container_memory_peak_bytes": 2544676864,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 46.41611907898914,
+      "system_nonavailable_baseline_bytes": 4683587584,
+      "sampled_system_nonavailable_peak_bytes": 12450463744,
+      "sampled_system_increase_peak_bytes": 7766876160,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.49782153000706
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3133112320,
+      "container_memory_peak_bytes": 2544373760,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 46.66331800800981,
+      "system_nonavailable_baseline_bytes": 4665774080,
+      "sampled_system_nonavailable_peak_bytes": 12595998720,
+      "sampled_system_increase_peak_bytes": 7930224640,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.59845855200547
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3134406656,
+      "container_memory_peak_bytes": 2546601984,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 50.46770985701005,
+      "system_nonavailable_baseline_bytes": 4791603200,
+      "sampled_system_nonavailable_peak_bytes": 12690890752,
+      "sampled_system_increase_peak_bytes": 7899287552,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.633587126998464
+          }
+        },
+        {
+          "relaxation": 4.738582774007227
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        },
+        {
+          "file": "6KWC_1_model_1_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "1be9353dbd17901ebc00d9ccf96011e7b3afb442d8c66ee88405960f9e630c06"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3433787392,
+      "container_memory_peak_bytes": 2805067776,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 50.466714100999525,
+      "system_nonavailable_baseline_bytes": 4579102720,
+      "sampled_system_nonavailable_peak_bytes": 12696502272,
+      "sampled_system_increase_peak_bytes": 8117399552,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.6616953809862
+          }
+        },
+        {
+          "relaxation": 4.799658236996038
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        },
+        {
+          "file": "6KWC_1_model_1_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "9f6ed975d56839c77614b190ab86aff075e2b3e04629569fe907f3b062aa6285"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3434426368,
+      "container_memory_peak_bytes": 2806292480,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 51.37662987399381,
+      "system_nonavailable_baseline_bytes": 4568371200,
+      "sampled_system_nonavailable_peak_bytes": 12941647872,
+      "sampled_system_increase_peak_bytes": 8373276672,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.63972153599025
+          }
+        },
+        {
+          "relaxation": 4.703124882013071
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        },
+        {
+          "file": "6KWC_1_model_1_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f78e472c4f0bc82a19a9494c1a0912f2d14cb1b2c4bf1e4ce491a22094258356"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3435102208,
+      "container_memory_peak_bytes": 2807451648,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 15.084714180993615,
+      "system_nonavailable_baseline_bytes": 4793491456,
+      "sampled_system_nonavailable_peak_bytes": 8111067136,
+      "sampled_system_increase_peak_bytes": 3317575680,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.638986553996801
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2441502720,
+      "container_memory_peak_bytes": 1846226944,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 14.791561624995666,
+      "system_nonavailable_baseline_bytes": 4928315392,
+      "sampled_system_nonavailable_peak_bytes": 7693520896,
+      "sampled_system_increase_peak_bytes": 2765205504,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.607958849024726
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2441715712,
+      "container_memory_peak_bytes": 1847291904,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 14.892147058009868,
+      "system_nonavailable_baseline_bytes": 4648300544,
+      "sampled_system_nonavailable_peak_bytes": 7837634560,
+      "sampled_system_increase_peak_bytes": 3189334016,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.607232956012012
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2441490432,
+      "container_memory_peak_bytes": 1845297152,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 19.781319083995186,
+      "system_nonavailable_baseline_bytes": 4710998016,
+      "sampled_system_nonavailable_peak_bytes": 8149569536,
+      "sampled_system_increase_peak_bytes": 3438571520,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.606865642010234
+          }
+        },
+        {
+          "relaxation": 4.734047861013096
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        },
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "ea64860fc93b7e128b50e906ccdd56536a50d1b2cccc999354371eb653f5673b"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2795839488,
+      "container_memory_peak_bytes": 2159157248,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 19.698254017013824,
+      "system_nonavailable_baseline_bytes": 4789002240,
+      "sampled_system_nonavailable_peak_bytes": 8262352896,
+      "sampled_system_increase_peak_bytes": 3473350656,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.631403024017345
+          }
+        },
+        {
+          "relaxation": 4.715968171978602
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        },
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "05636b6c3071c6634bfebb252ad932ba9afc96bf1755f82704f071d99b1faf05"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2794033152,
+      "container_memory_peak_bytes": 2158239744,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 19.428178661008133,
+      "system_nonavailable_baseline_bytes": 4631801856,
+      "sampled_system_nonavailable_peak_bytes": 8260501504,
+      "sampled_system_increase_peak_bytes": 3628699648,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.58431175199803
+          }
+        },
+        {
+          "relaxation": 4.684795314999064
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        },
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "dffe3a76b88abe53739b7a33252372bbcc5faf3b46c402f22208cba5bac204ab"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2793570304,
+      "container_memory_peak_bytes": 2157903872,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    }
+  ],
+  "rebuilt": [
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "embedding",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 7.513483410992194,
+      "system_nonavailable_baseline_bytes": 4678488064,
+      "sampled_system_nonavailable_peak_bytes": 15480668160,
+      "sampled_system_increase_peak_bytes": 10802180096,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 10935259136,
+      "container_memory_peak_bytes": 10766438400,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "embedding",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 7.419498112023575,
+      "system_nonavailable_baseline_bytes": 4875468800,
+      "sampled_system_nonavailable_peak_bytes": 15477985280,
+      "sampled_system_increase_peak_bytes": 10602516480,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 10935922688,
+      "container_memory_peak_bytes": 10765918208,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "embedding",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 7.418850338988705,
+      "system_nonavailable_baseline_bytes": 4877606912,
+      "sampled_system_nonavailable_peak_bytes": 15486447616,
+      "sampled_system_increase_peak_bytes": 10608840704,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 10933059584,
+      "container_memory_peak_bytes": 10766180352,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 20.12557050900068,
+      "system_nonavailable_baseline_bytes": 4699410432,
+      "sampled_system_nonavailable_peak_bytes": 9585180672,
+      "sampled_system_increase_peak_bytes": 4885770240,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.878468707989668
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3038146560,
+      "container_memory_peak_bytes": 2441715712,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 19.764581807976356,
+      "system_nonavailable_baseline_bytes": 4830285824,
+      "sampled_system_nonavailable_peak_bytes": 9632153600,
+      "sampled_system_increase_peak_bytes": 4801867776,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.915809030004311
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3040866304,
+      "container_memory_peak_bytes": 2440630272,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 19.913264908012934,
+      "system_nonavailable_baseline_bytes": 4856307712,
+      "sampled_system_nonavailable_peak_bytes": 9552990208,
+      "sampled_system_increase_peak_bytes": 4696682496,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.919643661996815
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3038003200,
+      "container_memory_peak_bytes": 2440998912,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 26.04668587798369,
+      "system_nonavailable_baseline_bytes": 4925460480,
+      "sampled_system_nonavailable_peak_bytes": 9842913280,
+      "sampled_system_increase_peak_bytes": 4917452800,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.8991066130111
+          }
+        },
+        {
+          "relaxation": 5.911658379016444
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        },
+        {
+          "file": "2q2k_A_model_1_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "940988eb9ebb8b21410777374c43f1b30927a9f442d5bec3c8b95961ea871155"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3210829824,
+      "container_memory_peak_bytes": 2555797504,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 25.12254803298856,
+      "system_nonavailable_baseline_bytes": 4691910656,
+      "sampled_system_nonavailable_peak_bytes": 9727451136,
+      "sampled_system_increase_peak_bytes": 5035540480,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.923329835000914
+          }
+        },
+        {
+          "relaxation": 5.053742707998026
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        },
+        {
+          "file": "2q2k_A_model_1_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "5e9b28b13a85db886711e2ea09db9cd423155ee8c0b0bb4e750b093a282ae5e9"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3212820480,
+      "container_memory_peak_bytes": 2554515456,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 39.93904494197341,
+      "system_nonavailable_baseline_bytes": 4600143872,
+      "sampled_system_nonavailable_peak_bytes": 9797029888,
+      "sampled_system_increase_peak_bytes": 5196886016,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.907857413985766
+          }
+        },
+        {
+          "relaxation": 19.711995791003574
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        },
+        {
+          "file": "2q2k_A_model_1_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "de5bccd04390d8cfc7559511691e3219f3f0825c1a20ef026fe1b3b79702a247"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3221929984,
+      "container_memory_peak_bytes": 2565767168,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 9.055687612009933,
+      "system_nonavailable_baseline_bytes": 4634124288,
+      "sampled_system_nonavailable_peak_bytes": 7606222848,
+      "sampled_system_increase_peak_bytes": 2972098560,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.0648716959985904
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2387275776,
+      "container_memory_peak_bytes": 1787330560,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 8.984912856016308,
+      "system_nonavailable_baseline_bytes": 4749029376,
+      "sampled_system_nonavailable_peak_bytes": 7676657664,
+      "sampled_system_increase_peak_bytes": 2927628288,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.063143481995212
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2389446656,
+      "container_memory_peak_bytes": 1787461632,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 8.973652745014988,
+      "system_nonavailable_baseline_bytes": 4802957312,
+      "sampled_system_nonavailable_peak_bytes": 7659085824,
+      "sampled_system_increase_peak_bytes": 2856128512,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.0621055609954055
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2385625088,
+      "container_memory_peak_bytes": 1786572800,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 12.819582739000907,
+      "system_nonavailable_baseline_bytes": 4753539072,
+      "sampled_system_nonavailable_peak_bytes": 7897157632,
+      "sampled_system_increase_peak_bytes": 3143618560,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.0710260839841794
+          }
+        },
+        {
+          "relaxation": 3.7079997950058896
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        },
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "a3bd11962d4924a8202aff75b2be3433113eabab297afab3714bc32bb4dc1e59"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2555510784,
+      "container_memory_peak_bytes": 1898045440,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 12.811047028022585,
+      "system_nonavailable_baseline_bytes": 4632195072,
+      "sampled_system_nonavailable_peak_bytes": 7886397440,
+      "sampled_system_increase_peak_bytes": 3254202368,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.0478376889950596
+          }
+        },
+        {
+          "relaxation": 3.791567023989046
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        },
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "c7c9b325407b483e26202124ecf2b8ca65ada8fd0448c94a6bf1be37114d9415"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2551910400,
+      "container_memory_peak_bytes": 1898082304,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 12.896323769993614,
+      "system_nonavailable_baseline_bytes": 4559564800,
+      "sampled_system_nonavailable_peak_bytes": 7800631296,
+      "sampled_system_increase_peak_bytes": 3241066496,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.068106806022115
+          }
+        },
+        {
+          "relaxation": 3.717862986988621
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        },
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "89fdc1c30db2628283a119c815bddd358657a3dc493d1b541318bdfa6acdf537"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2556157952,
+      "container_memory_peak_bytes": 1897115648,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "embedding",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 7.417446292005479,
+      "system_nonavailable_baseline_bytes": 4587356160,
+      "sampled_system_nonavailable_peak_bytes": 15378878464,
+      "sampled_system_increase_peak_bytes": 10791522304,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 10934788096,
+      "container_memory_peak_bytes": 10766094336,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "embedding",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 7.464010997995501,
+      "system_nonavailable_baseline_bytes": 4762120192,
+      "sampled_system_nonavailable_peak_bytes": 15592923136,
+      "sampled_system_increase_peak_bytes": 10830802944,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 10934816768,
+      "container_memory_peak_bytes": 10766524416,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "embedding",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 7.4467791430070065,
+      "system_nonavailable_baseline_bytes": 4890337280,
+      "sampled_system_nonavailable_peak_bytes": 15727816704,
+      "sampled_system_increase_peak_bytes": 10837479424,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 10935660544,
+      "container_memory_peak_bytes": 10766708736,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 45.52718280500267,
+      "system_nonavailable_baseline_bytes": 5044948992,
+      "sampled_system_nonavailable_peak_bytes": 12718686208,
+      "sampled_system_increase_peak_bytes": 7673737216,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.39530523199937
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3133829120,
+      "container_memory_peak_bytes": 2543816704,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 46.43130829097936,
+      "system_nonavailable_baseline_bytes": 4759547904,
+      "sampled_system_nonavailable_peak_bytes": 12382621696,
+      "sampled_system_increase_peak_bytes": 7623073792,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.49584963498637
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3137028096,
+      "container_memory_peak_bytes": 2543824896,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 45.607000308984425,
+      "system_nonavailable_baseline_bytes": 4640714752,
+      "sampled_system_nonavailable_peak_bytes": 12420268032,
+      "sampled_system_increase_peak_bytes": 7779553280,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.49798647200805
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3135168512,
+      "container_memory_peak_bytes": 2542063616,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 51.212514222977916,
+      "system_nonavailable_baseline_bytes": 4653821952,
+      "sampled_system_nonavailable_peak_bytes": 12920033280,
+      "sampled_system_increase_peak_bytes": 8266211328,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.59896612900775
+          }
+        },
+        {
+          "relaxation": 4.655155974993249
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        },
+        {
+          "file": "6KWC_1_model_1_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "fb891c1cc54e633bf6986e573a1b49c745de69f0b53942bcf7c9c48c012f5673"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3436630016,
+      "container_memory_peak_bytes": 2800386048,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 50.56118897499982,
+      "system_nonavailable_baseline_bytes": 4769292288,
+      "sampled_system_nonavailable_peak_bytes": 12987916288,
+      "sampled_system_increase_peak_bytes": 8218624000,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.55631527697551
+          }
+        },
+        {
+          "relaxation": 4.753677745000459
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        },
+        {
+          "file": "6KWC_1_model_1_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "930c7045dcbf8e28ab03294e63a7ff7904fc0878dee0f7e100df4a38da310d8e"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3436474368,
+      "container_memory_peak_bytes": 2804232192,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 50.53393219099962,
+      "system_nonavailable_baseline_bytes": 4799938560,
+      "sampled_system_nonavailable_peak_bytes": 13025042432,
+      "sampled_system_increase_peak_bytes": 8225103872,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.65646649900009
+          }
+        },
+        {
+          "relaxation": 4.794021542998962
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        },
+        {
+          "file": "6KWC_1_model_1_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f77b16fe29ec36f7408c9d1b5e67eee144c13a3b87f497a41946787cefd0a66f"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3432267776,
+      "container_memory_peak_bytes": 2800857088,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 14.888787364994641,
+      "system_nonavailable_baseline_bytes": 4591194112,
+      "sampled_system_nonavailable_peak_bytes": 8048857088,
+      "sampled_system_increase_peak_bytes": 3457662976,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.639566894999007
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2446532608,
+      "container_memory_peak_bytes": 1842659328,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 15.013104659010423,
+      "system_nonavailable_baseline_bytes": 4870213632,
+      "sampled_system_nonavailable_peak_bytes": 7823192064,
+      "sampled_system_increase_peak_bytes": 2952978432,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.627645180997206
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2446258176,
+      "container_memory_peak_bytes": 1842180096,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 14.985353192023467,
+      "system_nonavailable_baseline_bytes": 4753600512,
+      "sampled_system_nonavailable_peak_bytes": 8038604800,
+      "sampled_system_increase_peak_bytes": 3285004288,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.855664217000594
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2443780096,
+      "container_memory_peak_bytes": 1842683904,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 19.722339658997953,
+      "system_nonavailable_baseline_bytes": 4853616640,
+      "sampled_system_nonavailable_peak_bytes": 8513392640,
+      "sampled_system_increase_peak_bytes": 3659776000,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.755330801010132
+          }
+        },
+        {
+          "relaxation": 4.799536395003088
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        },
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "82097b9180d4fd573a96eaee922e9395b88651ecbf0b9de9d3ee0db93896e6d1"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2792910848,
+      "container_memory_peak_bytes": 2148909056,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 19.675640042987652,
+      "system_nonavailable_baseline_bytes": 4785078272,
+      "sampled_system_nonavailable_peak_bytes": 8310411264,
+      "sampled_system_increase_peak_bytes": 3525332992,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.819402368011652
+          }
+        },
+        {
+          "relaxation": 4.8500922480016015
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        },
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "4ee8ef6b496521367f8bd74928bcdd973a6846fc658f41bfd7d9b0a5c0533ad9"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2789408768,
+      "container_memory_peak_bytes": 2148941824,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 19.769221649010433,
+      "system_nonavailable_baseline_bytes": 4651782144,
+      "sampled_system_nonavailable_peak_bytes": 8321679360,
+      "sampled_system_increase_peak_bytes": 3669897216,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.570195328997215
+          }
+        },
+        {
+          "relaxation": 4.794452269008616
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        },
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "c20b5861b3f924896fbaaf53f45e557c878bb2fcbfbec98923f3af42acf879ce"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2793168896,
+      "container_memory_peak_bytes": 2149761024,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    }
+  ],
+  "modern": [
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "embedding",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 7.475916841998696,
+      "system_nonavailable_baseline_bytes": 4696698880,
+      "sampled_system_nonavailable_peak_bytes": 15481589760,
+      "sampled_system_increase_peak_bytes": 10784890880,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 11001180160,
+      "container_memory_peak_bytes": 10771066880,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "embedding",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 7.41216080301092,
+      "system_nonavailable_baseline_bytes": 4883058688,
+      "sampled_system_nonavailable_peak_bytes": 15501127680,
+      "sampled_system_increase_peak_bytes": 10618068992,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 11004329984,
+      "container_memory_peak_bytes": 10771337216,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "embedding",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 7.342407105024904,
+      "system_nonavailable_baseline_bytes": 4702908416,
+      "sampled_system_nonavailable_peak_bytes": 15549935616,
+      "sampled_system_increase_peak_bytes": 10847027200,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2626349056,
+      "peak_cuda_reserved_bytes": 2650800128,
+      "peak_main_process_rss_bytes": 10999545856,
+      "container_memory_peak_bytes": 10771472384,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 19.88020897001843,
+      "system_nonavailable_baseline_bytes": 4728823808,
+      "sampled_system_nonavailable_peak_bytes": 9600393216,
+      "sampled_system_increase_peak_bytes": 4871569408,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.887025219009956
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3063066624,
+      "container_memory_peak_bytes": 2428043264,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 20.049961564014666,
+      "system_nonavailable_baseline_bytes": 4993011712,
+      "sampled_system_nonavailable_peak_bytes": 9530789888,
+      "sampled_system_increase_peak_bytes": 4537778176,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.90989742599777
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3069227008,
+      "container_memory_peak_bytes": 2429894656,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 19.915271992998896,
+      "system_nonavailable_baseline_bytes": 4662865920,
+      "sampled_system_nonavailable_peak_bytes": 9428398080,
+      "sampled_system_increase_peak_bytes": 4765532160,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.89063898299355
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3066445824,
+      "container_memory_peak_bytes": 2429837312,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 39.67382474298938,
+      "system_nonavailable_baseline_bytes": 4773892096,
+      "sampled_system_nonavailable_peak_bytes": 9784803328,
+      "sampled_system_increase_peak_bytes": 5010911232,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.929947757016635
+          }
+        },
+        {
+          "relaxation": 19.740838805999374
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        },
+        {
+          "file": "2q2k_A_model_1_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "1a1e6550362723a12d4fe47f3031c888c42f377a128274ee47fac1bba20e9bdb"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3244630016,
+      "container_memory_peak_bytes": 2557394944,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 42.57585593900876,
+      "system_nonavailable_baseline_bytes": 4552839168,
+      "sampled_system_nonavailable_peak_bytes": 9690025984,
+      "sampled_system_increase_peak_bytes": 5137186816,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.91562477700063
+          }
+        },
+        {
+          "relaxation": 22.71841410000343
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        },
+        {
+          "file": "2q2k_A_model_1_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "767e2a5032e0ca5f4de85438f00696034b7336a1e47c27d3c75559000a647a9d"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3238002688,
+      "container_memory_peak_bytes": 2556907520,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "standard",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 43.50033293099841,
+      "system_nonavailable_baseline_bytes": 4553064448,
+      "sampled_system_nonavailable_peak_bytes": 9726435328,
+      "sampled_system_increase_peak_bytes": 5173370880,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 9.938172399008181
+          }
+        },
+        {
+          "relaxation": 23.236898169998312
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_model_1_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+        },
+        {
+          "file": "2q2k_A_model_1_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 41.641917808219176,
+          "sha256": "d65a7781dcef0ae50409c34cdad919e185de9afe76decd61f9fd27b26740bbed"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2059928064,
+      "peak_cuda_reserved_bytes": 2183135232,
+      "peak_main_process_rss_bytes": 3242254336,
+      "container_memory_peak_bytes": 2557980672,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 8.708562055020593,
+      "system_nonavailable_baseline_bytes": 4543954944,
+      "sampled_system_nonavailable_peak_bytes": 7516065792,
+      "sampled_system_increase_peak_bytes": 2972110848,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.0484361140115652
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2414014464,
+      "container_memory_peak_bytes": 1777004544,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 8.74325356297777,
+      "system_nonavailable_baseline_bytes": 4632797184,
+      "sampled_system_nonavailable_peak_bytes": 7547006976,
+      "sampled_system_increase_peak_bytes": 2914209792,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.055661953985691
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2416889856,
+      "container_memory_peak_bytes": 1777020928,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": false,
+      "wall_seconds": 8.856531937024556,
+      "system_nonavailable_baseline_bytes": 4667293696,
+      "sampled_system_nonavailable_peak_bytes": 7602114560,
+      "sampled_system_increase_peak_bytes": 2934820864,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.0628829400229733
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2417659904,
+      "container_memory_peak_bytes": 1777467392,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 12.790445852006087,
+      "system_nonavailable_baseline_bytes": 4746366976,
+      "sampled_system_nonavailable_peak_bytes": 7847825408,
+      "sampled_system_increase_peak_bytes": 3101458432,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.0670042019919492
+          }
+        },
+        {
+          "relaxation": 3.9060189469892066
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        },
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "f233c28ed3cca877f2ace2934b00fbe83314e6f9bea150d6af00255036b1bb3f"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2575691776,
+      "container_memory_peak_bytes": 1888034816,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 12.64379704699968,
+      "system_nonavailable_baseline_bytes": 4623314944,
+      "sampled_system_nonavailable_peak_bytes": 8088301568,
+      "sampled_system_increase_peak_bytes": 3464986624,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.0471465390000958
+          }
+        },
+        {
+          "relaxation": 3.834290325001348
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        },
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "cd97572233fe4477b235c5f88c4815f3e2921570f1073bd5a2fe8b720578c7ce"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2580160512,
+      "container_memory_peak_bytes": 1888911360,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "soloseq",
+      "protein": "short",
+      "residues": 73,
+      "relaxation": true,
+      "wall_seconds": 12.655561427003704,
+      "system_nonavailable_baseline_bytes": 4850671616,
+      "sampled_system_nonavailable_peak_bytes": 8079204352,
+      "sampled_system_increase_peak_bytes": 3228532736,
+      "internal_timings": [
+        {
+          "2q2k_A": {
+            "inference": 1.0650509329861961
+          }
+        },
+        {
+          "relaxation": 3.815818652015878
+        }
+      ],
+      "outputs": [
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "63db8afc8628e6cf392a31f48097c540f35d2f6bb0a32c47b7a7ae0051f90f32"
+        },
+        {
+          "file": "2q2k_A_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 73,
+          "mean_plddt": 92.22972602739726,
+          "sha256": "d3e61e20f648c7172c8416710e94b9366f69d97f8db6ba39e7a776d813b99ef6"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 670965248,
+      "peak_cuda_reserved_bytes": 916455424,
+      "peak_main_process_rss_bytes": 2579820544,
+      "container_memory_peak_bytes": 1888182272,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "embedding",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 7.372500024008332,
+      "system_nonavailable_baseline_bytes": 4890447872,
+      "sampled_system_nonavailable_peak_bytes": 15657512960,
+      "sampled_system_increase_peak_bytes": 10767065088,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 10999812096,
+      "container_memory_peak_bytes": 10771820544,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "embedding",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 7.433930376020726,
+      "system_nonavailable_baseline_bytes": 4810817536,
+      "sampled_system_nonavailable_peak_bytes": 15431118848,
+      "sampled_system_increase_peak_bytes": 10620301312,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 11001298944,
+      "container_memory_peak_bytes": 10771976192,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "embedding",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 7.472916389000602,
+      "system_nonavailable_baseline_bytes": 4627783680,
+      "sampled_system_nonavailable_peak_bytes": 15424090112,
+      "sampled_system_increase_peak_bytes": 10796306432,
+      "internal_timings": [],
+      "outputs": [],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 2638083072,
+      "peak_cuda_reserved_bytes": 2654994432,
+      "peak_main_process_rss_bytes": 11003199488,
+      "container_memory_peak_bytes": 10771161088,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 46.449102904007304,
+      "system_nonavailable_baseline_bytes": 4636782592,
+      "sampled_system_nonavailable_peak_bytes": 12539912192,
+      "sampled_system_increase_peak_bytes": 7903129600,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.52349723898806
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3184578560,
+      "container_memory_peak_bytes": 2531438592,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 45.57083391500055,
+      "system_nonavailable_baseline_bytes": 4663353344,
+      "sampled_system_nonavailable_peak_bytes": 12334211072,
+      "sampled_system_increase_peak_bytes": 7670857728,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.56779329298297
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3165343744,
+      "container_memory_peak_bytes": 2531725312,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 45.588288414001,
+      "system_nonavailable_baseline_bytes": 4720685056,
+      "sampled_system_nonavailable_peak_bytes": 12371816448,
+      "sampled_system_increase_peak_bytes": 7651131392,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.5789413729799
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3163709440,
+      "container_memory_peak_bytes": 2530639872,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 50.154842613002984,
+      "system_nonavailable_baseline_bytes": 4734009344,
+      "sampled_system_nonavailable_peak_bytes": 12804562944,
+      "sampled_system_increase_peak_bytes": 8070553600,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.552502081991406
+          }
+        },
+        {
+          "relaxation": 4.768373030994553
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        },
+        {
+          "file": "6KWC_1_model_1_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "bfc5789df5abdf1df4c76f98d961014d75e2d542b49d8071b3a6ae0c99f9747b"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3456483328,
+      "container_memory_peak_bytes": 2790219776,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 50.43542306299787,
+      "system_nonavailable_baseline_bytes": 4634005504,
+      "sampled_system_nonavailable_peak_bytes": 12773560320,
+      "sampled_system_increase_peak_bytes": 8139554816,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.539508411020506
+          }
+        },
+        {
+          "relaxation": 4.792998068995075
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        },
+        {
+          "file": "6KWC_1_model_1_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "549371bb737f314017ebcb03e0a84a9127ac662c27120ae4a2f82dbb9b8ef787"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3453198336,
+      "container_memory_peak_bytes": 2787045376,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "standard",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 50.52021978702396,
+      "system_nonavailable_baseline_bytes": 4620533760,
+      "sampled_system_nonavailable_peak_bytes": 12794322944,
+      "sampled_system_increase_peak_bytes": 8173789184,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 35.609295946982456
+          }
+        },
+        {
+          "relaxation": 4.842547412990825
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_model_1_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "f0fb4f2acdc9dd28f059893c046537b7bc92e1c72e724c179acee11f1ec3fc76"
+        },
+        {
+          "file": "6KWC_1_model_1_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 97.4992670157068,
+          "sha256": "9731a1c57ca902014892df4f3c7c515927689b01a6c9be0d3eaf8bc14764f296"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 4838810112,
+      "peak_cuda_reserved_bytes": 5100273664,
+      "peak_main_process_rss_bytes": 3449823232,
+      "container_memory_peak_bytes": 2789048320,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 14.603560593997827,
+      "system_nonavailable_baseline_bytes": 4695719936,
+      "sampled_system_nonavailable_peak_bytes": 8036552704,
+      "sampled_system_increase_peak_bytes": 3340832768,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.612078719976125
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2473259008,
+      "container_memory_peak_bytes": 1832869888,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 14.77445777298999,
+      "system_nonavailable_baseline_bytes": 5004840960,
+      "sampled_system_nonavailable_peak_bytes": 8110280704,
+      "sampled_system_increase_peak_bytes": 3105439744,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.5984641700051725
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2492440576,
+      "container_memory_peak_bytes": 1832747008,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": false,
+      "wall_seconds": 14.661589468014427,
+      "system_nonavailable_baseline_bytes": 4786528256,
+      "sampled_system_nonavailable_peak_bytes": 7966875648,
+      "sampled_system_increase_peak_bytes": 3180347392,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.5798687049828
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2474721280,
+      "container_memory_peak_bytes": 1833209856,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": true,
+      "replicate": 0,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 19.70458649902139,
+      "system_nonavailable_baseline_bytes": 4899086336,
+      "sampled_system_nonavailable_peak_bytes": 8156745728,
+      "sampled_system_increase_peak_bytes": 3257659392,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.589253877988085
+          }
+        },
+        {
+          "relaxation": 4.914274972019484
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        },
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "aa4a2329e39a0aa098bb00d9b006480e51847e2f6c6010323826da1a077b4f0b"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2814918656,
+      "container_memory_peak_bytes": 2142105600,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 1,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 19.382634840003448,
+      "system_nonavailable_baseline_bytes": 4600422400,
+      "sampled_system_nonavailable_peak_bytes": 8092385280,
+      "sampled_system_increase_peak_bytes": 3491962880,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.591303544992115
+          }
+        },
+        {
+          "relaxation": 4.789515501994174
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        },
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "5ff61ff424491efeb216f5e4b50c8442775c599610c8e29b2084631999191ff6"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2816802816,
+      "container_memory_peak_bytes": 2141696000,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    },
+    {
+      "warmup": false,
+      "replicate": 2,
+      "task": "soloseq",
+      "protein": "medium",
+      "residues": 191,
+      "relaxation": true,
+      "wall_seconds": 19.697312127012992,
+      "system_nonavailable_baseline_bytes": 4778823680,
+      "sampled_system_nonavailable_peak_bytes": 8093691904,
+      "sampled_system_increase_peak_bytes": 3314868224,
+      "internal_timings": [
+        {
+          "6KWC_1": {
+            "inference": 6.606464340002276
+          }
+        },
+        {
+          "relaxation": 4.827861904981546
+        }
+      ],
+      "outputs": [
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_unrelaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "45ceacc7341d3f6ca3b60e446e835f451a2727ddc1f2959222655303cad1bf13"
+        },
+        {
+          "file": "6KWC_1_seq_model_esm1b_ptm_relaxed.pdb",
+          "residues": 191,
+          "mean_plddt": 95.40465968586388,
+          "sha256": "189daa7d8a230b094776ba290bf5831219dad15ba24d0484258a9e2ce478469b"
+        }
+      ],
+      "completed": true,
+      "peak_cuda_allocated_bytes": 992030720,
+      "peak_cuda_reserved_bytes": 1069547520,
+      "peak_main_process_rss_bytes": 2819633152,
+      "container_memory_peak_bytes": 2144350208,
+      "torch": "2.10.0a0+b558c986e8.nv25.11",
+      "cuda": "13.0",
+      "allocator": "expandable_segments:True"
+    }
+  ]
+}

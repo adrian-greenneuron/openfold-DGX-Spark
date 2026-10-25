@@ -7,10 +7,11 @@
 # =============================================================================
 
 set -euo pipefail
+cd -- "$(dirname -- "${BASH_SOURCE[0]}")"
 
 # Configuration
-IMAGE_NAME="${IMAGE_NAME:-openfold-spark}"
-IMAGE_TAG="${IMAGE_TAG:-cuda13}"
+IMAGE_NAME="${IMAGE_NAME:-openfold-official-spark}"
+IMAGE_TAG="${IMAGE_TAG:-2.2.0-251026}"
 DOCKERFILE="${DOCKERFILE:-Dockerfile}"
 
 # Colors for output
@@ -34,16 +35,16 @@ Usage: $0 [OPTIONS]
 Build OpenFold Docker image for DGX Spark.
 
 Options:
-    -n, --name NAME     Image name (default: openfold-spark)
-    -t, --tag TAG       Image tag (default: cuda13)
+    -n, --name NAME     Image name (default: openfold-official-spark)
+    -t, --tag TAG       Image tag (default: 2.2.0-251026)
     -f, --file FILE     Dockerfile path (default: Dockerfile)
     --no-cache          Build without cache
     --test              Run quick import test after build
     -h, --help          Show this help
 
 Examples:
-    $0                          # Build openfold-spark:cuda13
-    $0 -t latest                # Build openfold-spark:latest
+    $0                          # Build openfold-official-spark:2.2.0-251026
+    $0 -t latest                # Build openfold-official-spark:latest
     $0 --no-cache --test        # Full rebuild with testing
 
 EOF
@@ -125,6 +126,7 @@ info "Starting Docker build..."
 BUILD_START=$(date +%s)
 
 docker build \
+    --pull \
     ${NO_CACHE} \
     -t "${FULL_IMAGE}" \
     -f "${DOCKERFILE}" \

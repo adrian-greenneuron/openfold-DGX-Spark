@@ -1,0 +1,10 @@
+.git
+output
+predictions
+embeddings
+__pycache__
+**/__pycache__
+*.pt
+*.ckpt
+*.tar
+*.log

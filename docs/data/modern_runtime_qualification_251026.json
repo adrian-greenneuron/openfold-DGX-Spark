@@ -1,0 +1,29 @@
+{
+  "qualified": true,
+  "reference": "modern_runtime_comparison_251026.json",
+  "model_weight_mismatches": [],
+  "source_changes": "Removed redundant architecture and cosmetic regex patches; CUDA import compatibility remains.",
+  "updated_packages": [
+    "OpenMM",
+    "deepspeed"
+  ],
+  "removed_unused_apt_dependencies": [
+    "chardet",
+    "propka",
+    "mmcif-pdbx",
+    "roman",
+    "pdb2pqr"
+  ],
+  "new_packages": {
+    "nvidia-cuda-nvrtc": "13.0.88",
+    "nvidia-cuda-crt": "13.4.92",
+    "nvidia-cuda-nvcc": "13.0.88",
+    "nvidia-nvvm": "13.4.92",
+    "nvidia-cuda-cupti": "13.0.85",
+    "nvidia-cufft": "12.0.0.61",
+    "nvidia-nvjitlink": "13.4.92",
+    "OpenMM-CUDA-13": "8.6.1",
+    "nvidia-cuda-runtime": "13.0.96"
+  },
+  "unexpected_differences": []
+}

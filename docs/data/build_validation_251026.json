@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-25",
+  "original_build_seconds": 1503.127,
+  "modern_build_seconds": 1320.43,
+  "original_rebuild": {
+    "checked_source_files": 140,
+    "checked_distributions": 278,
+    "checked_downloaded_artifacts": 16,
+    "all_match": true
+  },
+  "benchmark_runs_per_condition": 30,
+  "inference_configurations": 8,
+  "warmups": 1,
+  "measured_repetitions": 2,
+  "all_images_unrelaxed_files_identical": true,
+  "embedding_tensors_identical": 12,
+  "openmm_official_gpu_test": "Reference/CPU/CUDA force differences all within tolerance",
+  "deterministic_model_verification_files_identical": 6,
+  "gpu_relaxation_byte_repeatable": false,
+  "post_build_assertions": "Template/resource checksum assertions validated on built images; final modern CUDA constraints pin the already-tested installed versions.",
+  "existing_resources_deleted": false,
+  "image_ids": {
+    "original": "sha256:ef325cee635c55fab17c4cfc716a4b570641ccbf2a4c918ff1eb37ccb8b02517",
+    "rebuilt": "sha256:a5d9ff3cde19dd7912831b040056dd16efdd7800b6dcd88dfd34812f398641ae",
+    "modern": "sha256:580252c806fc17a1ea09aad460c03707656e638f129b401be4dee5ef5ba81886"
+  },
+  "offline_launcher_validation": "launcher_validation_251026.json",
+  "cpu_guard_tests_passed": 8
+}

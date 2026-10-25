@@ -1,0 +1,61 @@
+{
+  "source_mismatches": [
+    "openfold/utils/script_utils.py",
+    "setup.py"
+  ],
+  "weight_mismatches": [],
+  "version_mismatches": {
+    "OpenMM": {
+      "original": "8.4.0",
+      "rebuilt": "8.6.1"
+    },
+    "deepspeed": {
+      "original": "0.15.4",
+      "rebuilt": "0.19.8"
+    },
+    "chardet": {
+      "original": "5.2.0",
+      "rebuilt": null
+    },
+    "propka": {
+      "original": "3.5.1",
+      "rebuilt": null
+    },
+    "mmcif-pdbx": {
+      "original": "2.0.1",
+      "rebuilt": null
+    },
+    "roman": {
+      "original": "3.3",
+      "rebuilt": null
+    },
+    "pdb2pqr": {
+      "original": "3.6.1",
+      "rebuilt": null
+    }
+  },
+  "extra_distributions": {
+    "nvidia-cuda-nvrtc": "13.0.88",
+    "nvidia-cuda-crt": "13.4.92",
+    "nvidia-cuda-nvcc": "13.0.88",
+    "nvidia-nvvm": "13.4.92",
+    "nvidia-cuda-cupti": "13.0.85",
+    "nvidia-cufft": "12.0.0.61",
+    "nvidia-nvjitlink": "13.4.92",
+    "OpenMM-CUDA-13": "8.6.1",
+    "nvidia-cuda-runtime": "13.0.96"
+  },
+  "source_files_checked": 140,
+  "weights_checked": 16,
+  "distributions_checked": 278,
+  "stereo_chemical_props_match": true,
+  "allowed_source_differences": [
+    "setup.py",
+    "openfold/utils/script_utils.py"
+  ],
+  "allowed_version_differences": [
+    "OpenMM",
+    "deepspeed"
+  ],
+  "matches": false
+}

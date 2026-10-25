@@ -1,0 +1,56 @@
+[
+  {
+    "image": "openfold-spark:cuda13",
+    "label": "original",
+    "replicate": 1,
+    "wall_seconds": 21.335664784011897,
+    "hashes": {
+      "2q2k_A_model_1_ptm_unrelaxed.pdb": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+    }
+  },
+  {
+    "image": "openfold-spark:cuda13",
+    "label": "original",
+    "replicate": 2,
+    "wall_seconds": 21.15153395300149,
+    "hashes": {
+      "2q2k_A_model_1_ptm_unrelaxed.pdb": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+    }
+  },
+  {
+    "image": "openfold-spark:rebuild-251026",
+    "label": "rebuilt",
+    "replicate": 1,
+    "wall_seconds": 21.08902619301807,
+    "hashes": {
+      "2q2k_A_model_1_ptm_unrelaxed.pdb": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+    }
+  },
+  {
+    "image": "openfold-spark:rebuild-251026",
+    "label": "rebuilt",
+    "replicate": 2,
+    "wall_seconds": 21.067733944015345,
+    "hashes": {
+      "2q2k_A_model_1_ptm_unrelaxed.pdb": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+    }
+  },
+  {
+    "image": "openfold-official-spark:2.2.0-251026",
+    "label": "modern",
+    "replicate": 1,
+    "wall_seconds": 20.89140119001968,
+    "hashes": {
+      "2q2k_A_model_1_ptm_unrelaxed.pdb": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+    }
+  },
+  {
+    "image": "openfold-official-spark:2.2.0-251026",
+    "label": "modern",
+    "replicate": 2,
+    "wall_seconds": 20.83264665599563,
+    "hashes": {
+      "2q2k_A_model_1_ptm_unrelaxed.pdb": "95d6a136d136676c1a45ff69d28d78e4b108d21b3ba92bb5729c296020d72655"
+    }
+  }
+]
